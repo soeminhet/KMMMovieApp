@@ -14,6 +14,7 @@ import com.smh.movie.domain.usecase.DeleteFavouriteMovieUseCase
 import com.smh.movie.domain.usecase.GetAllFavouriteMoviesUseCase
 import com.smh.movie.domain.usecase.GetNowPlayingMoviesUseCase
 import com.smh.movie.domain.usecase.GetPopularMoviesUseCase
+import com.smh.movie.domain.usecase.GetPopularMoviesUseCaseIOS
 import com.smh.movie.domain.usecase.GetTopRatedMoviesUseCase
 import com.smh.movie.domain.usecase.InsertOrUpdateFavouriteMovieUseCase
 import com.smh.movie.utility.provideDispatcher
@@ -39,6 +40,8 @@ private val domainModule = module {
     factory { InsertOrUpdateFavouriteMovieUseCase() }
     factory { GetAllFavouriteMoviesUseCase() }
     factory { DeleteFavouriteMovieUseCase() }
+
+    factory { GetPopularMoviesUseCaseIOS() }
 }
 
 private val sharedModule = listOf(dataModule, dispatcherModule, domainModule)
