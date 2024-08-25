@@ -10,13 +10,26 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        ProgressView()
-            .padding()
-            .background(
-                Circle()
-                    .fill(.white)
-            )
-            .shadow(radius: 10)
+        VStack(alignment: .center) {
+            Spacer()
+            
+            IndeterminateLinearProgressBar()
+                .padding(.horizontal, 6)
+            
+            IndeterminateLinearProgressBar()
+            
+            IndeterminateLinearProgressBar()
+                .padding(.horizontal, 6)
+            
+            Spacer()
+        }
+        .frame(width: 50, height: 50)
+        .padding()
+        .background(
+            Circle()
+                .fill(.white)
+        )
+        .shadow(radius: 10)
     }
 }
 

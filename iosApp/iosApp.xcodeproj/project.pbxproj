@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		603798882C7B13B200E792D7 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603798872C7B13B200E792D7 /* FavouriteViewModel.swift */; };
 		6037988A2C7B182C00E792D7 /* HomeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603798892C7B182C00E792D7 /* HomeToolbar.swift */; };
+		6037988C2C7B219000E792D7 /* IndeterminateLinearProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037988B2C7B219000E792D7 /* IndeterminateLinearProgressBar.swift */; };
 		6048A2F12C7AD46300C9D610 /* CategoryRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048A2F02C7AD46300C9D610 /* CategoryRoute.swift */; };
 		6048A2F42C7AD5B000C9D610 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048A2F32C7AD5B000C9D610 /* CategoryView.swift */; };
 		6048A2F62C7AE6F600C9D610 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048A2F52C7AE6F600C9D610 /* CategoryViewModel.swift */; };
@@ -50,6 +51,7 @@
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		603798872C7B13B200E792D7 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		603798892C7B182C00E792D7 /* HomeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToolbar.swift; sourceTree = "<group>"; };
+		6037988B2C7B219000E792D7 /* IndeterminateLinearProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndeterminateLinearProgressBar.swift; sourceTree = "<group>"; };
 		6048A2F02C7AD46300C9D610 /* CategoryRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRoute.swift; sourceTree = "<group>"; };
 		6048A2F32C7AD5B000C9D610 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		6048A2F52C7AE6F600C9D610 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				6048A2F92C7AF50400C9D610 /* LoadingView.swift */,
 				6048A2FB2C7AF63A00C9D610 /* ToolbarView.swift */,
 				603798892C7B182C00E792D7 /* HomeToolbar.swift */,
+				6037988B2C7B219000E792D7 /* IndeterminateLinearProgressBar.swift */,
 			);
 			name = Component;
 			path = ..;
@@ -312,6 +315,7 @@
 				603798882C7B13B200E792D7 /* FavouriteViewModel.swift in Sources */,
 				60520DAE2C799C8D00AF7288 /* CarouselUiModel.swift in Sources */,
 				6048A2F42C7AD5B000C9D610 /* CategoryView.swift in Sources */,
+				6037988C2C7B219000E792D7 /* IndeterminateLinearProgressBar.swift in Sources */,
 				604ED89E2C79D847000D1B6A /* Router.swift in Sources */,
 				60520DB42C79A4BF00AF7288 /* HorizontalMoviesCell.swift in Sources */,
 				6048A2FA2C7AF50400C9D610 /* LoadingView.swift in Sources */,

@@ -59,7 +59,8 @@ struct VerticalPagingCell: View {
             .scenePadding(.horizontal)
             
             if isMoreLoading {
-                ProgressView()
+                IndeterminateLinearProgressBar()
+                    .frame(width: 100)
             }
         }
     }
