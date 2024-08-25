@@ -15,7 +15,7 @@ A cross-platform mobile application for discovering movies, built using Kotlin M
 - 🌐 **Ktor for Networking**: Lightweight HTTP client to fetch movie data from the TMDB API.
 - 📊 **Cross-Platform Shared Logic**: Core logic shared across Android and iOS using KMM.
 - 📱 **Native UI**: Platform-specific UIs implemented using Jetpack Compose on Android and SwiftUI on iOS.
-- 🔄 **Swift Interop with Kotlin via SKIE**: Seamless integration between Kotlin and Swift, utilizing SKIE libraries for effective interoperability.
+- 🔄 **SKIE**: Seamless integration between Kotlin and Swift, utilizing SKIE libraries for effective interoperability.
 
 ## 🛠️ Technologies Used
 
