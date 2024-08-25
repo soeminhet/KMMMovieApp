@@ -9,3 +9,83 @@ captures
 local.properties
 xcuserdata
 .kotlin
+
+# Xcode
+#
+build/
+DerivedData/
+*.xcworkspace
+xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/
+!default.mode1v3
+!default.mode2v3
+!default.pbxuser
+
+# Swift Package Manager
+#
+.build/
+Package.resolved
+
+# CocoaPods
+#
+Pods/
+Podfile.lock
+*.xcscmblueprint
+
+# Carthage
+#
+Carthage/Build/
+Carthage/Checkouts/
+Carthage/Packages/
+
+# Fastlane
+#
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Coverage
+#
+*.xccovreport
+*.xccovarchive
+
+# Other
+#
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.bcsymbolmap
+*.moved-aside
+*.xcuserstate
+
+# Swift Playgrounds
+#
+timeline.xctimeline
+playground.xcworkspace
+
+# Xcode Crashes
+#
+xcuserdata
+
+# Realm
+#
+*.realm
+*.realm.lock
+*.realm.management
+*.realm.note
+*.realm.notice
+*.realm.log
+
+# Xcode environment variable logs
+#
+xcdebugger/
+
+# SwiftPM
+#
+.swiftpm/xcode
+
+# AppCode
+.idea/
