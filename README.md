@@ -29,8 +29,7 @@ A cross-platform mobile application for discovering movies, built using Kotlin M
 
 ## 🎥 Demo
 
-[![Video 1](https://img.shields.io/badge/Video-1-blue.svg)](https://github.com/user-attachments/assets/3bac68b0-f5e0-438b-a321-1a41e4fa5717)
-[![Video 2](https://img.shields.io/badge/Video-2-blue.svg)](https://github.com/user-attachments/assets/3bac68b0-f5e0-438b-a321-1a41e4fa5717)
+https://github.com/user-attachments/assets/3bac68b0-f5e0-438b-a321-1a41e4fa5717
 
 ## 🚀 Getting Started
 
