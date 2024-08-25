@@ -98,7 +98,7 @@ private fun HomeContent(
                 .animateContentSize(),
             columns = GridCells.Adaptive(150.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
-            contentPadding = PaddingValues(horizontal = 16.dp)
+            contentPadding = PaddingValues(all = 16.dp)
         ) {
             movieCarouselSection(
                 list = uiState.nowPlayingMovies,
