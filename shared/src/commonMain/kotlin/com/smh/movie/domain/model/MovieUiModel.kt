@@ -1,6 +1,4 @@
-package com.smh.movie.android.data.model
-
-import com.smh.movie.domain.model.VoteAverage
+package com.smh.movie.domain.model
 
 data class MovieUiModel(
     val id: Int,

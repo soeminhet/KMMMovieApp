@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     kotlin("plugin.serialization") version "2.0.0"
     alias(libs.plugins.sqlDelight)
+    id("co.touchlab.skie")
 }
 
 sqldelight {
@@ -47,6 +48,8 @@ kotlin {
             api(libs.koin.core)
             api(libs.arrow.core)
             api(libs.arrow.fx.coroutines)
+
+            api("co.touchlab:stately-common:2.0.5")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -67,6 +70,9 @@ kotlin {
             dependencies {
                 implementation(libs.native.driver)
                 implementation(libs.ktor.client.darwin)
+
+                implementation("co.touchlab:stately-isolate:2.0.5")
+                implementation("co.touchlab:stately-iso-collections:2.0.5")
             }
 
             dependsOn(commonMain.get())

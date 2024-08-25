@@ -22,7 +22,7 @@ struct HorizontalTitleCell: View {
     var body: some View {
         HStack(alignment: .center) {
             Text(title)
-                .font(.title)
+                .font(.title3)
                 
             Spacer()
             
@@ -45,22 +45,34 @@ struct HorizontalMoviesCell: View {
     let title: String
     let movies: [MovieUiModel]
     let onClickMore: () -> Void
+    let onClickFavourite: (MovieUiModel) -> Void
     
-    init(title: String, movies: [MovieUiModel], onClickMore: @escaping (() -> Void)) {
+    init(
+        title: String,
+        movies: [MovieUiModel],
+        onClickMore: @escaping () -> Void,
+        onClickFavourite: @escaping (MovieUiModel) -> Void
+    ) {
         self.title = title
         self.movies = movies
         self.onClickMore = onClickMore
+        self.onClickFavourite = onClickFavourite
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            HorizontalTitleCell(title: title, onClickMore: onClickMore)
+            if !movies.isEmpty {
+                HorizontalTitleCell(title: title, onClickMore: onClickMore)
+            }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 16) {
                     ForEach(movies, id: \.id) { movie in
-                        MovieCell(movie: movie)
-                            .frame(width: 200)
+                        MovieCell(
+                            movie: movie,
+                            onClickFavourite: onClickFavourite
+                        )
+                        .frame(width: 200)
                     }
                 }
                 .scenePadding(.horizontal)
@@ -73,6 +85,7 @@ struct HorizontalMoviesCell: View {
     HorizontalMoviesCell(
         title: "Title",
         movies: [MovieUiModel.companion.example],
-        onClickMore: {}
+        onClickMore: {},
+        onClickFavourite: { _ in }
     )
 }

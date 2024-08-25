@@ -23,13 +23,10 @@ struct CategoryView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                CategoryTitleView(
+                ToolbarView(
                     title: categoryRoute.title,
                     onBack: { router.navigateBack() }
                 )
-                
-                Divider()
-                    .padding(.top, 10)
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     Spacer(minLength: 20)

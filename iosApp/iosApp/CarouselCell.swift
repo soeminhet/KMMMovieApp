@@ -42,7 +42,7 @@ struct CarouselCell: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 16)
                         .padding(.bottom, 16)
-                        .font(.title3)
+                        .font(.body)
                         .fontWeight(.medium)
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                         .truncationMode(.tail)

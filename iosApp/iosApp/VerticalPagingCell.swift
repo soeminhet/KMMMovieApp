@@ -16,24 +16,27 @@ struct VerticalPagingCell: View {
     let isLoading: Bool
     let isMoreLoading: Bool
     let onFetchMore: () async -> Void
+    let onClickFavourite: (MovieUiModel) -> Void
     
     init(
         title: String? = nil,
         movies: [MovieUiModel],
         isLoading: Bool,
         isMoreLoading: Bool,
-        onFetchMore: @escaping () async -> Void
+        onFetchMore: @escaping () async -> Void,
+        onClickFavourite: @escaping (MovieUiModel) -> Void
     ) {
         self.title = title
         self.movies = movies
         self.isLoading = isLoading
         self.isMoreLoading = isMoreLoading
         self.onFetchMore = onFetchMore
+        self.onClickFavourite = onClickFavourite
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            if let title = title {
+        VStack(alignment: .center, spacing: 6) {
+            if let title = title, !movies.isEmpty {
                 HorizontalTitleCell(title: title)
             }
             
@@ -42,12 +45,15 @@ struct VerticalPagingCell: View {
                 spacing: 16
             ) {
                 ForEach(movies, id: \.id) { movie in
-                    MovieCell(movie: movie)
-                        .task {
-                            if movie == movies.last && !isLoading && !isMoreLoading {
-                                await onFetchMore()
-                            }
+                    MovieCell(
+                        movie: movie,
+                        onClickFavourite: onClickFavourite
+                    )
+                    .task {
+                        if movie == movies.last && !isLoading && !isMoreLoading {
+                            await onFetchMore()
                         }
+                    }
                 }
             }
             .scenePadding(.horizontal)
@@ -64,6 +70,8 @@ struct VerticalPagingCell: View {
         title: "Upcoming",
         movies: [MovieUiModel.companion.example],
         isLoading: false,
-        isMoreLoading: false
-    ) {}
+        isMoreLoading: false,
+        onFetchMore: { },
+        onClickFavourite: { _ in}
+    )
 }

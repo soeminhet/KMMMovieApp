@@ -3,8 +3,8 @@ package com.smh.movie.android.ui.category
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.smh.movie.android.data.mapper.toFavouriteMovieModel
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.data.mapper.toFavouriteMovieModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.android.utility.observeMovies
 import com.smh.movie.domain.model.FavouriteMovieModel
 import com.smh.movie.domain.model.MovieModel

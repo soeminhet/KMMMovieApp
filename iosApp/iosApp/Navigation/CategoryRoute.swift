@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+enum CategoryRoute: String, Hashable {
+    case Popular = "Pouplar Movies"
+    case TopRated = "TopRated Movies"
+    
+    var title: String {
+        self.rawValue
+    }
+    
+    static func fromName(_ name: String) -> CategoryRoute {
+        return CategoryRoute(rawValue: name) ?? Popular
+    }
+}

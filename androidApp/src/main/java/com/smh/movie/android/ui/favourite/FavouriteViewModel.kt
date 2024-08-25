@@ -2,8 +2,7 @@ package com.smh.movie.android.ui.favourite
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.domain.usecase.DeleteFavouriteMovieUseCase
 import com.smh.movie.domain.usecase.GetAllFavouriteMoviesUseCase
 import kotlinx.coroutines.flow.SharingStarted

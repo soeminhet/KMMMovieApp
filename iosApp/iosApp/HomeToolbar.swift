@@ -9,11 +9,31 @@
 import SwiftUI
 
 struct HomeToolbar: View {
+    
+    let onClickFavourite: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Welcome Back")
+                .font(.title2)
+            
+            Spacer()
+            
+            Button {
+                onClickFavourite()
+            } label: {
+                Image(systemName: "heart")
+                    .tint(.primary)
+                    .font(.title2)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 50)
+        .scenePadding(.horizontal)
     }
 }
 
 #Preview {
-    HomeToolbar()
+    HomeToolbar(
+        onClickFavourite: {}
+    )
 }

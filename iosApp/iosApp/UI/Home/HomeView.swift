@@ -17,46 +17,54 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 24) {
-                    CarouselCell(carousels: vm.nowPlayingUiModels)
+            VStack(spacing: 0) {
+                HomeToolbar(
+                    onClickFavourite: { router.navigate(to: "Favourite") }
+                )
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    Spacer(minLength: 20)
                     
-                    HorizontalMoviesCell(
-                        title: "Top Rated",
-                        movies: vm.topRatedUiModels,
-                        onClickMore: { router.navigate(to: CategoryRoute.TopRated) },
-                        onClickFavourite: { movie in
-                            Task {
-                                await vm.toggleFavourite(movie: movie)
+                    VStack(spacing: 24) {
+                        CarouselCell(carousels: vm.nowPlayingUiModels)
+                        
+                        HorizontalMoviesCell(
+                            title: "Top Rated",
+                            movies: vm.topRatedUiModels,
+                            onClickMore: { router.navigate(to: CategoryRoute.TopRated) },
+                            onClickFavourite: { movie in
+                                Task {
+                                    await vm.toggleFavourite(movie: movie)
+                                }
                             }
-                        }
-                    )
-                    
-                    HorizontalMoviesCell(
-                        title: "Popular",
-                        movies: vm.popularUiMovies,
-                        onClickMore: { router.navigate(to: CategoryRoute.Popular) },
-                        onClickFavourite: { movie in
-                            Task {
-                                await vm.toggleFavourite(movie: movie)
+                        )
+                        
+                        HorizontalMoviesCell(
+                            title: "Popular",
+                            movies: vm.popularUiMovies,
+                            onClickMore: { router.navigate(to: CategoryRoute.Popular) },
+                            onClickFavourite: { movie in
+                                Task {
+                                    await vm.toggleFavourite(movie: movie)
+                                }
                             }
-                        }
-                    )
-                    
-                    VerticalPagingCell(
-                        title: "Upcoming",
-                        movies: vm.upcomingUiMovies,
-                        isLoading: vm.loading,
-                        isMoreLoading: vm.isMoreUpcomingLoading,
-                        onFetchMore: { await vm.fetchMoreUpcoming() },
-                        onClickFavourite: { movie in
-                            Task {
-                                await vm.toggleFavourite(movie: movie)
+                        )
+                        
+                        VerticalPagingCell(
+                            title: "Upcoming",
+                            movies: vm.upcomingUiMovies,
+                            isLoading: vm.loading,
+                            isMoreLoading: vm.isMoreUpcomingLoading,
+                            onFetchMore: { await vm.fetchMoreUpcoming() },
+                            onClickFavourite: { movie in
+                                Task {
+                                    await vm.toggleFavourite(movie: movie)
+                                }
                             }
-                        }
-                    )
-                    
-                    Spacer()
+                        )
+                        
+                        Spacer()
+                    }
                 }
             }
             

@@ -9,7 +9,7 @@ import com.smh.movie.domain.model.MovieModel
 import com.smh.movie.domain.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 
-internal class MovieRepositoryImpl(
+class MovieRepositoryImpl(
     private val remoteDataSource: MovieRemoteDataSource,
     private val favouriteMovieDataSource: FavouriteMovieDataSource
 ): MovieRepository {

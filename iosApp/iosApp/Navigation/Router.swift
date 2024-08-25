@@ -14,7 +14,9 @@ import SwiftUI
     public init() {}
 
     public func navigate(to destination: any Hashable) {
+        print(navPath.count)
         navPath.append(destination)
+        print(navPath.count)
     }
 
     public func navigateBack() {

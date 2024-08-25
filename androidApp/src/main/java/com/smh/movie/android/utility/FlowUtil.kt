@@ -1,7 +1,7 @@
 package com.smh.movie.android.utility
 
-import com.smh.movie.android.data.mapper.toUiModel
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.data.mapper.toUiModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.domain.model.FavouriteMovieModel
 import com.smh.movie.domain.model.MovieModel
 import kotlinx.coroutines.flow.Flow

@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.fastForEachIndexed
 import androidx.compose.ui.util.lerp
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.android.ui.theme.LightGray
 import com.smh.movie.android.ui.theme.Orange
 import com.smh.movie.android.ui.theme.White

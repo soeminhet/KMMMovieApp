@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct CarouselUiModel: Identifiable {
+    let id: Int32
+    let image: String
+    let title: String
+}

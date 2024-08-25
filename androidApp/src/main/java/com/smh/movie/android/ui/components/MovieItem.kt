@@ -29,7 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.android.ui.theme.Green
 import com.smh.movie.android.ui.theme.MovieTheme
 import com.smh.movie.android.ui.theme.NavyBlue

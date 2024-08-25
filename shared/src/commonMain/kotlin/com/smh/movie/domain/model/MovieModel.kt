@@ -13,18 +13,6 @@ data class MovieModel(
     val releaseDate: String,
     val votePercentage: Int,
 ) {
-    val votePercentageString: String get() = "$votePercentage%"
-
-    val votePercentageFloat: Float get() = votePercentage / 100f
-
-    val voteAverage: VoteAverage get() {
-        return when {
-            votePercentage >= 70 -> VoteAverage.High
-            votePercentage in 40..69 -> VoteAverage.Medium
-            else -> VoteAverage.Low
-        }
-    }
-
     companion object {
         val example = MovieModel(
             id = 1,

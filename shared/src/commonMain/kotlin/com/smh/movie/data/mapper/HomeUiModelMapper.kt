@@ -1,6 +1,6 @@
-package com.smh.movie.android.data.mapper
+package com.smh.movie.data.mapper
 
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.domain.model.FavouriteMovieModel
 import com.smh.movie.domain.model.MovieModel
 

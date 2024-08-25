@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.compose.compiler).apply(false)
     alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization).apply(false)
     alias(libs.plugins.sqlDelight).apply(false)
+    id("co.touchlab.skie") version "0.8.4" apply false
 }

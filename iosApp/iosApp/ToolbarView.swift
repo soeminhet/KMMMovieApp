@@ -14,29 +14,34 @@ struct ToolbarView: View {
     let onBack: () -> Void
     
     var body: some View {
-        HStack {
-            Button {
-                onBack()
-            } label: {
+        VStack(spacing: 0) {
+            HStack {
+                Button {
+                    onBack()
+                } label: {
+                    Image(systemName: "arrow.backward")
+                        .font(.title3)
+                        .tint(.primary)
+                }
+                
+                Spacer()
+                
+                Text(title)
+                    .font(.title2)
+                
+                Spacer()
+                
                 Image(systemName: "arrow.backward")
                     .font(.title3)
                     .tint(.primary)
+                    .opacity(0)
             }
+            .scenePadding(.horizontal)
+            .frame(maxWidth: .infinity, minHeight: 50, alignment: .center)
             
-            Spacer()
-            
-            Text(title)
-                .font(.title2)
-            
-            Spacer()
-            
-            Image(systemName: "arrow.backward")
-                .font(.title3)
-                .tint(.primary)
-                .opacity(0)
+            Divider()
+                .padding(.top, 10)
         }
-        .scenePadding(.horizontal)
-        .frame(maxWidth: .infinity, minHeight: 50, alignment: .center)
     }
 }
 

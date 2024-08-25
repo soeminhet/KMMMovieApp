@@ -3,9 +3,8 @@ package com.smh.movie.android.ui.home
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.smh.movie.android.data.mapper.toFavouriteMovieModel
-import com.smh.movie.android.data.mapper.toUiModel
-import com.smh.movie.android.data.model.MovieUiModel
+import com.smh.movie.data.mapper.toFavouriteMovieModel
+import com.smh.movie.domain.model.MovieUiModel
 import com.smh.movie.android.utility.observeMovies
 import com.smh.movie.domain.model.FavouriteMovieModel
 import com.smh.movie.domain.model.MovieModel
@@ -17,11 +16,9 @@ import com.smh.movie.domain.usecase.GetTopRatedMoviesUseCase
 import com.smh.movie.domain.usecase.GetUpcomingMoviesUseCase
 import com.smh.movie.domain.usecase.InsertOrUpdateFavouriteMovieUseCase
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
